@@ -73,7 +73,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: np.array([1,1,1,1,1,1,1,1])
+    value: np.array([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
   states:
     bus_sink: false
     bus_source: false
@@ -124,7 +124,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [568, 472.0]
+    coordinate: [544, 480.0]
     rotation: 0
     state: true
 - name: analog_const_source_x_0_0
@@ -160,7 +160,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [792, 258]
+    coordinate: [856, 224.0]
     rotation: 0
     state: true
 - name: analog_random_source_x_0
@@ -231,7 +231,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [584, 672.0]
+    coordinate: [592, 672.0]
     rotation: 0
     state: true
 - name: blocks_file_source_0
@@ -343,7 +343,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [851, 175]
+    coordinate: [912, 144.0]
     rotation: 0
     state: true
 - name: blocks_unpack_k_bits_bb_0
@@ -352,14 +352,14 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    k: '8'
+    k: '16'
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [520, 376.0]
+    coordinate: [576, 376.0]
     rotation: 0
     state: enabled
 - name: epy_block_0
@@ -535,7 +535,7 @@ blocks:
     bus_structure: null
     coordinate: [246, 770]
     rotation: 0
-    state: true
+    state: enabled
 - name: qtgui_time_sink_x_0
   id: qtgui_time_sink_x
   parameters:
@@ -632,7 +632,7 @@ blocks:
     bus_structure: null
     coordinate: [385, 490]
     rotation: 0
-    state: true
+    state: disabled
 - name: qtgui_vector_sink_f_0
   id: qtgui_vector_sink_f
   parameters:
@@ -730,7 +730,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1008, 261]
+    coordinate: [1072.0, 232]
     rotation: 270
     state: enabled
 - name: virtual_sink_0_1_0_0
@@ -743,7 +743,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [951, 332]
+    coordinate: [1016.0, 304]
     rotation: 270
     state: enabled
 - name: virtual_source_0
