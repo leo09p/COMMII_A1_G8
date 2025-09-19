@@ -241,7 +241,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: /home/com_2_A1_G8/labcomu/COMMII_A1_G8/Practica_2/GNURadio/rana.jpg
+    file: /home/com_2_A1_G8/labcomu/COMMII_A1_G8/Practica_2/GNURadio/rana_invertida.png
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
