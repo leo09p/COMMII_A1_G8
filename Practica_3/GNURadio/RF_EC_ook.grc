@@ -287,9 +287,20 @@ blocks:
   id: epy_block
   parameters:
     _source_code: "import numpy as np\nfrom gnuradio import gr\nimport math\n\nclass\
-      \ blk(gr.sync_block):  \n    \"\"\"This block is a RF VCO and works as following:\
-      \ \u2026..\"\"\"\n\n    def __init__(self, fc=128000, samp_rate=320000):  \n\
-      \        gr.sync_block.__init__(\n            self,\n            name='e_RF_VCO_ff',\
+      \ blk(gr.sync_block):  \n    \"\"\"This block is a RF VCO and works as following:\n\
+      \tThis block implements a voltage-controlled oscillator (VCO) in the digital\
+      \ domain.\nIts main function is to generate a sinusoidal signal whose amplitude\
+      \ and phase can be controlled externally using the block's inputs.\nThe block\
+      \ receives two float inputs (32-bit floating-point numbers)\nand produces a\
+      \ float output.\nFirst input: Amplitude: This input controls the amplitude of\
+      \ the sinusoidal signal. Each sample received at this input directly multiplies\n\
+      the amplitude of the generated wave. If a constant is entered, the signal will\
+      \ have a fixed amplitude; if it varies over time,\nthe output will reflect that\
+      \ amplitude modulation.\nSecond input: Phase: Corresponds to the instantaneous\
+      \ phase added to the carrier angle.\nIt allows the signal to be shifted in time\
+      \ (phase shift) or even phase modulated if this input changes over time.\nOutput:\
+      \ Modulated sinusoidal signal\"\"\"\n\n    def __init__(self, fc=128000, samp_rate=320000):\
+      \  \n        gr.sync_block.__init__(\n            self,\n            name='e_RF_VCO_ff',\
       \   \n            in_sig=[np.float32, np.float32],\n            out_sig=[np.float32]\n\
       \        )\n        self.fc = fc\n        self.samp_rate = samp_rate\n     \
       \   self.n_m=0\n\n    def work(self, input_items, output_items):\n        A=input_items[0]\n\
@@ -305,13 +316,24 @@ blocks:
     minoutbuf: '0'
     samp_rate: samp_rate
   states:
-    _io_cache: "('e_RF_VCO_ff', 'blk', [('fc', '128000'), ('samp_rate', '320000')],\
-      \ [('0', 'float', 1), ('1', 'float', 1)], [('0', 'float', 1)], 'This block is\
-      \ a RF VCO and works as following: \u2026..', ['fc', 'samp_rate'])"
+    _io_cache: '(''e_RF_VCO_ff'', ''blk'', [(''fc'', ''128000''), (''samp_rate'',
+      ''320000'')], [(''0'', ''float'', 1), (''1'', ''float'', 1)], [(''0'', ''float'',
+      1)], "This block is a RF VCO and works as following:\n\tThis block implements
+      a voltage-controlled oscillator (VCO) in the digital domain.\nIts main function
+      is to generate a sinusoidal signal whose amplitude and phase can be controlled
+      externally using the block''s inputs.\nThe block receives two float inputs (32-bit
+      floating-point numbers)\nand produces a float output.\nFirst input: Amplitude:
+      This input controls the amplitude of the sinusoidal signal. Each sample received
+      at this input directly multiplies\nthe amplitude of the generated wave. If a
+      constant is entered, the signal will have a fixed amplitude; if it varies over
+      time,\nthe output will reflect that amplitude modulation.\nSecond input: Phase:
+      Corresponds to the instantaneous phase added to the carrier angle.\nIt allows
+      the signal to be shifted in time (phase shift) or even phase modulated if this
+      input changes over time.\nOutput: Modulated sinusoidal signal", [''fc'', ''samp_rate''])'
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1102, 213]
+    coordinate: [1104, 164.0]
     rotation: 0
     state: true
 - name: epy_block_0_0
@@ -319,21 +341,50 @@ blocks:
   parameters:
     _source_code: "import numpy as np\nfrom gnuradio import gr\nimport math\n\nclass\
       \ blk(gr.sync_block):  \n    \"\"\"This block is a CE VCO or baseband VCO and\
-      \ works as following: \u2026..\"\"\"\n\n    def __init__(self,):  \n       \
-      \ gr.sync_block.__init__(\n            self,\n            name='e_CE_VCO_fc',\
-      \   \n            in_sig=[np.float32, np.float32],\n            out_sig=[np.complex64]\n\
-      \        )\n        \n    def work(self, input_items, output_items):\n     \
-      \   A=input_items[0]\n        Q=input_items[1]\n        y=output_items[0]\n\
-      \        N=len(A)\n        y[:]=A*np.exp(1j*Q)\n        return len(output_items[0])\n"
+      \ works as following:\n\t      This block implements a baseband voltage-controlled\
+      \ oscillator (CE VCO or Complex Exponential VCO).\n        Its function is to\
+      \ generate a complex baseband signal whose amplitude and phase are controlled\
+      \ by the block's inputs.\n        Unlike the RF VCO (which generates a real\
+      \ passband signal with center frequency fc), this block operates in the complex\
+      \ domain\n        and does not use an explicit carrier frequency parameter.\n\
+      \        First input: Amplitude: This is a vector of values \u200B\u200Bthat\
+      \ control the magnitude of the complex output signal.\n        If a constant\
+      \ value (for example, 1.0) is entered, the output will have a fixed amplitude.\
+      \ If the amplitude varies over time,\n        amplitude modulation (AM) is generated.\n\
+      \        Second input: Phase: This directly represents the instantaneous phase\
+      \ of the complex signal. Each sample in this input defines the angle of the\
+      \ complex exponential.\n        By varying this input over time, phase modulation\
+      \ (PM) or frequency modulation (FM) can be implemented, depending on how the\
+      \ phase evolves.\n        Output: Complex baseband signal.\"\"\"\n\n    def\
+      \ __init__(self,):  \n        gr.sync_block.__init__(\n            self,\n \
+      \           name='e_CE_VCO_fc',   \n            in_sig=[np.float32, np.float32],\n\
+      \            out_sig=[np.complex64]\n        )\n        \n    def work(self,\
+      \ input_items, output_items):\n        A=input_items[0]\n        Q=input_items[1]\n\
+      \        y=output_items[0]\n        N=len(A)\n        y[:]=A*np.exp(1j*Q)\n\
+      \        return len(output_items[0])\n"
     affinity: ''
     alias: ''
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
-    _io_cache: "('e_CE_VCO_fc', 'blk', [], [('0', 'float', 1), ('1', 'float', 1)],\
-      \ [('0', 'complex', 1)], 'This block is a CE VCO or baseband VCO and works as\
-      \ following: \u2026..', [])"
+    _io_cache: '(''e_CE_VCO_fc'', ''blk'', [], [(''0'', ''float'', 1), (''1'', ''float'',
+      1)], [(''0'', ''complex'', 1)], "This block is a CE VCO or baseband VCO and
+      works as following:\n\t      This block implements a baseband voltage-controlled
+      oscillator (CE VCO or Complex Exponential VCO).\n        Its function is to
+      generate a complex baseband signal whose amplitude and phase are controlled
+      by the block''s inputs.\n        Unlike the RF VCO (which generates a real passband
+      signal with center frequency fc), this block operates in the complex domain\n        and
+      does not use an explicit carrier frequency parameter.\n        First input:
+      Amplitude: This is a vector of values \u200b\u200bthat control the magnitude
+      of the complex output signal.\n        If a constant value (for example, 1.0)
+      is entered, the output will have a fixed amplitude. If the amplitude varies
+      over time,\n        amplitude modulation (AM) is generated.\n        Second
+      input: Phase: This directly represents the instantaneous phase of the complex
+      signal. Each sample in this input defines the angle of the complex exponential.\n        By
+      varying this input over time, phase modulation (PM) or frequency modulation
+      (FM) can be implemented, depending on how the phase evolves.\n        Output:
+      Complex baseband signal.", [])'
     bus_sink: false
     bus_source: false
     bus_structure: null
@@ -1191,3 +1242,4 @@ connections:
 
 metadata:
   file_format: 1
+  grc_version: 3.10.12.0
