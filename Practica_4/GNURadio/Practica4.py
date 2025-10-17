@@ -6,7 +6,7 @@
 #
 # GNU Radio Python Flow Graph
 # Title: Practica4_leo_leandro
-# GNU Radio version: v3.10.11.0-89-ga17f69e7
+# GNU Radio version: 3.10.12.0
 
 from PyQt5 import Qt
 from gnuradio import qtgui
