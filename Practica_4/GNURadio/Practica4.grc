@@ -42,7 +42,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [720, 16.0]
+    coordinate: [736, 12.0]
     rotation: 0
     state: enabled
 - name: m
@@ -102,7 +102,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [944, 16.0]
+    coordinate: [1016, 20.0]
     rotation: 0
     state: enabled
 - name: sps
@@ -114,7 +114,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [864, 16.0]
+    coordinate: [912, 12.0]
     rotation: 0
     state: enabled
 - name: analog_const_source_x_0
@@ -131,8 +131,8 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [760.0, 360]
-    rotation: 90
+    coordinate: [592, 296.0]
+    rotation: 0
     state: enabled
 - name: analog_noise_source_x_0
   id: analog_noise_source_x
@@ -150,7 +150,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1080, 144.0]
+    coordinate: [1048, 300.0]
     rotation: 0
     state: enabled
 - name: analog_random_source_x_0
@@ -188,7 +188,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1312, 136.0]
+    coordinate: [1312, 320.0]
     rotation: 0
     state: enabled
 - name: blocks_char_to_float_0
@@ -207,7 +207,7 @@ blocks:
     bus_structure: null
     coordinate: [160, 552.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_char_to_float_0_0
   id: blocks_char_to_float
   parameters:
@@ -222,9 +222,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [416, 392.0]
+    coordinate: [376, 456.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_char_to_float_1
   id: blocks_char_to_float
   parameters:
@@ -239,7 +239,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [432, 232.0]
+    coordinate: [432, 200.0]
     rotation: 0
     state: enabled
 - name: blocks_multiply_const_vxx_0
@@ -257,7 +257,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [576, 232.0]
+    coordinate: [600, 232.0]
     rotation: 0
     state: enabled
 - name: blocks_null_sink_0
@@ -274,9 +274,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1344, 240.0]
+    coordinate: [1440, 608.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_repack_bits_bb_0
   id: blocks_repack_bits_bb
   parameters:
@@ -344,7 +344,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [608, 8.0]
+    coordinate: [616, 16.0]
     rotation: 0
     state: enabled
 - name: interp_fir_filter_xxx_0
@@ -363,7 +363,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1064, 240.0]
+    coordinate: [1056, 188.0]
     rotation: 0
     state: enabled
 - name: qtgui_const_sink_x_0
@@ -455,9 +455,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [992.0, 336]
+    coordinate: [996.0, 488]
     rotation: 270
-    state: enabled
+    state: disabled
 - name: qtgui_const_sink_x_0_0
   id: qtgui_const_sink_x
   parameters:
@@ -547,8 +547,8 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1360.0, 320]
-    rotation: 270
+    coordinate: [1416, 252.0]
+    rotation: 0
     state: enabled
 - name: qtgui_freq_sink_x_0
   id: qtgui_freq_sink_x
@@ -628,8 +628,8 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1112.0, 408]
-    rotation: 270
+    coordinate: [1416, 148.0]
+    rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0
   id: qtgui_time_sink_x
@@ -727,7 +727,7 @@ blocks:
     bus_structure: null
     coordinate: [344, 536.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_0_0
   id: qtgui_time_sink_x
   parameters:
@@ -822,9 +822,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [488.0, 536]
+    coordinate: [508.0, 544]
     rotation: 270
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_0_0_0
   id: qtgui_time_sink_x
   parameters:
@@ -919,9 +919,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [648.0, 336]
+    coordinate: [620.0, 536]
     rotation: 270
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_0_0_0_0
   id: qtgui_time_sink_x
   parameters:
@@ -1016,9 +1016,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [904.0, 344]
+    coordinate: [884.0, 512]
     rotation: 270
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_1
   id: qtgui_time_sink_x
   parameters:
@@ -1113,9 +1113,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1200.0, 408]
+    coordinate: [1084.0, 528]
     rotation: 270
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_1_0
   id: qtgui_time_sink_x
   parameters:
@@ -1210,9 +1210,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1296.0, 512]
+    coordinate: [1188.0, 512]
     rotation: 270
-    state: enabled
+    state: disabled
 - name: tab
   id: qtgui_tab_widget
   parameters:
@@ -1244,7 +1244,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [672, 592.0]
+    coordinate: [16, 624.0]
     rotation: 0
     state: enabled
 
@@ -1272,4 +1272,4 @@ connections:
 
 metadata:
   file_format: 1
-  grc_version: v3.10.11.0-89-ga17f69e7
+  grc_version: 3.10.12.0
